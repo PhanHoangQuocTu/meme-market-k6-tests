@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gen-admin-secret": "node gen-secret-admin-wallet.js",
-    "gen-wallets": "node gen-wallets.js"
+    "gen:admin-secret": "node gen-secret-admin-wallet.js",
+    "gen:wallets": "node gen-wallets.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
   "dependencies": {
     "@coral-xyz/anchor": "^0.31.1",
     "@metaplex-foundation/js": "^0.20.1",
+    "@privy-io/server-auth": "^1.29.0",
     "@solana/spl-token": "^0.4.13",
     "@solana/web3.js": "^1.98.2",
     "bn.js": "^5.2.2",

@@ -1,23 +1,25 @@
-// src/test.ts
 import http from "k6/http";
 import { check, sleep } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
-  vus: 5000,
-  duration: "1m",
+  vus: 30,
+  duration: "30s",
 };
 
 export default function () {
   const now = new Date().toISOString();
-  const res = http.get(`${process.env.API_URL}/prediction-markets`);
+  // marketId: "Bh8eYrbhMaKrjBwXoHfzQeWzLBddtQ1v2vZ4JCuw8Vug"
+  const res = http.get(
+    "https://dev.mememarket.fun/market/Bh8eYrbhMaKrjBwXoHfzQeWzLBddtQ1v2vZ4JCuw8Vug"
+  );
 
   check(res, {
     "status is 200": (r) => {
       if (r.status !== 200) {
-        console.log(`[${now}] ❌ Status: ${r.status}`);
+        console.log(`[${now} - Page Market] ❌ Status: ${r.status}`);
       } else {
-        console.log(`[${now}] ✅ Success`);
+        console.log(`[${now} - Page Market] ✅ Success`);
       }
       return r.status === 200;
     },
