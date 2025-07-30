@@ -1,5 +1,5 @@
 import http from "k6/http";
-import { check, sleep } from "k6";
+import { check } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
@@ -21,6 +21,4 @@ export default function () {
       return r.status === 200;
     },
   });
-
-  sleep(0.5);
 }

@@ -1,5 +1,5 @@
 import http from "k6/http";
-import { check, sleep } from "k6";
+import { check } from "k6";
 import { Options } from "k6/options";
 
 interface IWallet {
@@ -6684,7 +6684,7 @@ const wallets: IWallet[] = [
 
 export const options: Options = {
   vus: 500,
-  duration: "1m",
+  duration: "30s",
   // iterations: 1000, // 1000 requests
 };
 
@@ -6707,10 +6707,10 @@ export default function () {
 
   const url = "http://localhost:3000/bet";
   const payload = JSON.stringify({
-    betYes: Math.random() > 0.7, //random true or false
+    betYes: Math.random() > 0.55, //random true or false
     amount: Math.random() * (0.0001 - 0.00001) + 0.00001, // random between 0.00001 and 0.0001
     isSol: true,
-    marketAddress: "5AdmGGBye2XZAxcKAQUT318HZpmyUQreKWi9jPcrngB4",
+    marketAddress: "6v6i8VjfNgu7n8eu6GsMgr65LfMS7jQ8XoaTUKJnWHjS",
     privateKey: wallet?.privateKeyBase58,
     decimal: 9,
   });
@@ -6733,6 +6733,4 @@ export default function () {
       return r.status === 201;
     },
   });
-
-  sleep(0.5);
 }

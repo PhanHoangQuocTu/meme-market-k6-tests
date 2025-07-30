@@ -1,8 +1,8 @@
 // page
-import homePage from "./page/test-home-page.ts";
-import marketPage from "./page/test-market-page.ts";
-import marketHistoryPage from "./page/test-market-history-page.ts";
-import activityPage from "./page/test-activity-page.ts";
+import homePage from "./page/test-page-home.ts";
+import marketPage from "./page/test-page-market.ts";
+import marketHistoryPage from "./page/test-page-market-history.ts";
+import activityPage from "./page/test-page-activity.ts";
 // api
 import apiMarkets from "./api/test-api-prediction-markets.ts";
 import apiActivities from "./api/test-api-prediction-activities.ts";

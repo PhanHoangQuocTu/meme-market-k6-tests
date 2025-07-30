@@ -1,9 +1,9 @@
 # scripts
 <!-- website -->
-k6 run src/tests/page/test-home-page.ts | tee "src/logs/page/test-home-page-$(date +%Y%m%d-%H%M%S).txt"
-k6 run src/tests/page/test-market-page.ts | tee "src/logs/page/test-market-page-$(date +%Y%m%d-%H%M%S).txt"
-k6 run src/tests/page/test-market-history-page.ts | tee "src/logs/page/test-market-history-page-$(date +%Y%m%d-%H%M%S).txt"
-k6 run src/tests/page/test-activity-page.ts | tee "src/logs/page/test-activity-page-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/page/test-page-home.ts | tee "src/logs/page/test-page-home-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/page/test-page-market.ts | tee "src/logs/page/test-page-market-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/page/test-page-market-history.ts | tee "src/logs/page/test-page-market-history-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/page/test-page-activity.ts | tee "src/logs/page/test-page-activity-$(date +%Y%m%d-%H%M%S).txt"
 
 <!-- api -->
 k6 run src/tests/api/test-api-prediction-markets.ts | tee "src/logs/api/test-api-prediction-markets-$(date +%Y%m%d-%H%M%S).txt"
