@@ -6684,7 +6684,7 @@ const wallets: IWallet[] = [
 
 export const options: Options = {
   vus: 500,
-  duration: "30s",
+  duration: "10s",
   // iterations: 1000, // 1000 requests
 };
 
@@ -6705,12 +6705,12 @@ export default function () {
   const now = new Date().toISOString();
   const wallet = wallets[__VU % wallets.length]; //
 
-  const url = "http://localhost:3000/withdraw";
+  const url = "https://meme-market-server-test-smct.onrender.com/withdraw";
   const payload = JSON.stringify({
     betYes: Math.random() > 0.55, //random true or false
     amount: Math.random() * (0.00001 - 0.000001) + 0.000001, // random between 0.000001 and 0.00001
     isSol: true,
-    marketAddress: "6v6i8VjfNgu7n8eu6GsMgr65LfMS7jQ8XoaTUKJnWHjS",
+    marketAddress: "B8avaUrcz5189iBm94Sg2oPCWEzZ8FSKazGxHf14tFLS",
     privateKey: wallet?.privateKeyBase58,
     decimal: 9,
   });
