@@ -1,3 +1,8 @@
 node_modules
 
 .env
+
+src/logs
+
+wallets.json
+admin-secret.json

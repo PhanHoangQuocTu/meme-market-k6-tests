@@ -6683,8 +6683,8 @@ const wallets: IWallet[] = [
 ];
 
 export const options: Options = {
-  vus: 500,
-  duration: "1m",
+  vus: 200,
+  duration: "30s",
   // iterations: 1000, // 1000 requests
 };
 
@@ -6705,10 +6705,10 @@ export default function () {
   const now = new Date().toISOString();
   const wallet = wallets[__VU % wallets.length]; //
 
-  const url = "http://localhost:3000/bet";
+  const url = "http://localhost:3000/withdraw";
   const payload = JSON.stringify({
     betYes: Math.random() > 0.7, //random true or false
-    amount: Math.random() * (0.0001 - 0.00001) + 0.00001, // random between 0.00001 and 0.0001
+    amount: Math.random() * (0.00001 - 0.000001) + 0.000001, // random between 0.000001 and 0.00001
     isSol: true,
     marketAddress: "5AdmGGBye2XZAxcKAQUT318HZpmyUQreKWi9jPcrngB4",
     privateKey: wallet?.privateKeyBase58,

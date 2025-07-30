@@ -22,7 +22,7 @@ const SOLANA_CONNECTION = new Connection(clusterApiUrl("devnet"), {
 });
 const ADMIN_WALLET = Keypair.fromSecretKey(new Uint8Array(SECRET_KEY));
 const AMOUNT_SOL = 0.05;
-const TOTAL_WALLETS = 50;
+const TOTAL_WALLETS = 500;
 const OUTPUT_FILE = "wallets.json";
 const BATCH_SIZE = 10;
 const BATCH_DELAY_MS = 500;
