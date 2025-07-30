@@ -1,0 +1,31 @@
+{
+  "name": "meme-market-k6-tests",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen-admin-secret": "node gen-secret-admin-wallet.js",
+    "gen-wallets": "node gen-wallets.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bn.js": "^5.2.0",
+    "@types/k6": "^1.1.1",
+    "@types/node": "^24.1.0",
+    "esbuild": "^0.25.8",
+    "k6": "^0.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@metaplex-foundation/js": "^0.20.1",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "bn.js": "^5.2.2",
+    "bs58": "^6.0.0"
+  }
+}
