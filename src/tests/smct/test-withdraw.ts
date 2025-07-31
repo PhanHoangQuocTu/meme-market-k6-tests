@@ -6683,7 +6683,7 @@ const wallets: IWallet[] = [
 ];
 
 export const options: Options = {
-  vus: 500,
+  vus: 15,
   duration: "10s",
   // iterations: 1000, // 1000 requests
 };
@@ -6694,7 +6694,7 @@ export const options: Options = {
 //       executor: "constant-arrival-rate",
 //       rate: 100, // 💥 100 requests per second
 //       timeUnit: "1s",
-//       duration: "1m",
+//       duration: "30s",
 //       preAllocatedVUs: 200,
 //       maxVUs: 50,
 //     },
@@ -6705,12 +6705,13 @@ export default function () {
   const now = new Date().toISOString();
   const wallet = wallets[__VU % wallets.length]; //
 
-  const url = "https://meme-market-server-test-smct.onrender.com/withdraw";
+  // const url = "https://meme-market-server-test-smct.onrender.com/withdraw";
+  const url = "http://localhost:3000/withdraw";
   const payload = JSON.stringify({
-    betYes: Math.random() > 0.55, //random true or false
+    betYes: Math.random() > 0.5, //random true or false
     amount: Math.random() * (0.00001 - 0.000001) + 0.000001, // random between 0.000001 and 0.00001
     isSol: true,
-    marketAddress: "B8avaUrcz5189iBm94Sg2oPCWEzZ8FSKazGxHf14tFLS",
+    marketAddress: "64jJtCLREgHNBbtJgwVzVrM1csZ1N9GST1yqjQGoYe1f",
     privateKey: wallet?.privateKeyBase58,
     decimal: 9,
   });

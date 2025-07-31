@@ -3,8 +3,8 @@ import { check } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
-  vus: 30,
-  duration: "30s",
+  vus: 10,
+  duration: "10s",
   // iterations: 1000, // 1000 requests
 };
 

@@ -1,0 +1,75 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: src/tests/api/test-api-prediction-markets-history.ts
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):
+              * default: 10 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 10/10 VUs, 208 complete and 0 interrupted iterations
+default   [  10% ] 10 VUs  01.0s/10s
+
+running (02.0s), 10/10 VUs, 404 complete and 0 interrupted iterations
+default   [  20% ] 10 VUs  02.0s/10s
+
+running (03.0s), 10/10 VUs, 584 complete and 0 interrupted iterations
+default   [  30% ] 10 VUs  03.0s/10s
+
+running (04.0s), 10/10 VUs, 677 complete and 0 interrupted iterations
+default   [  40% ] 10 VUs  04.0s/10s
+
+running (05.0s), 10/10 VUs, 879 complete and 0 interrupted iterations
+default   [  50% ] 10 VUs  05.0s/10s
+
+running (06.0s), 10/10 VUs, 1109 complete and 0 interrupted iterations
+default   [  60% ] 10 VUs  06.0s/10s
+
+running (07.0s), 10/10 VUs, 1295 complete and 0 interrupted iterations
+default   [  70% ] 10 VUs  07.0s/10s
+
+running (08.0s), 10/10 VUs, 1477 complete and 0 interrupted iterations
+default   [  80% ] 10 VUs  08.0s/10s
+
+running (09.0s), 10/10 VUs, 1661 complete and 0 interrupted iterations
+default   [  90% ] 10 VUs  09.0s/10s
+
+running (10.0s), 10/10 VUs, 1791 complete and 0 interrupted iterations
+default   [ 100% ] 10 VUs  10.0s/10s
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 1806    176.263225/s
+    checks_succeeded...................: 100.00% 1806 out of 1806
+    checks_failed......................: 0.00%   0 out of 1806
+
+    ✓ status is 200
+
+    HTTP
+    http_req_duration.......................................................: avg=52.98ms min=11.02ms med=42.58ms max=376.24ms p(90)=95.24ms  p(95)=120.73ms
+      { expected_response:true }............................................: avg=52.98ms min=11.02ms med=42.58ms max=376.24ms p(90)=95.24ms  p(95)=120.73ms
+    http_req_failed.........................................................: 0.00%  0 out of 1806
+    http_reqs...............................................................: 1806   176.263225/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=55.79ms min=11.59ms med=43.99ms max=376.77ms p(90)=104.98ms p(95)=130.01ms
+    iterations..............................................................: 1806   176.263225/s
+    vus.....................................................................: 10     min=10        max=10
+    vus_max.................................................................: 10     min=10        max=10
+
+    NETWORK
+    data_received...........................................................: 36 MB  3.5 MB/s
+    data_sent...............................................................: 251 kB 25 kB/s
+
+
+
+
+running (10.2s), 00/10 VUs, 1806 complete and 0 interrupted iterations
+default ✓ [ 100% ] 10 VUs  10s

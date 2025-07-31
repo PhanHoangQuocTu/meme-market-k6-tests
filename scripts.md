@@ -1,4 +1,5 @@
 # scripts
+
 <!-- website -->
 k6 run src/tests/page/test-page-home.ts | tee "src/logs/page/test-page-home-$(date +%Y%m%d-%H%M%S).txt"
 k6 run src/tests/page/test-page-market.ts | tee "src/logs/page/test-page-market-$(date +%Y%m%d-%H%M%S).txt"
@@ -12,6 +13,9 @@ k6 run src/tests/api/test-api-prediction-bets.ts | tee "src/logs/api/test-api-pr
 k6 run src/tests/api/test-api-top-bet-volume.ts | tee "src/logs/api/test-api-top-bet-volume-$(date +%Y%m%d-%H%M%S).txt"
 k6 run src/tests/api/test-api-prediction-markets-by-market-address.ts | tee "src/logs/api/test-api-prediction-markets-by-market-address-$(date +%Y%m%d-%H%M%S).txt"
 k6 run src/tests/api/test-api-prediction-markets-history.ts | tee "src/logs/api/test-api-prediction-markets-history-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/api/test-api-get-weekly-statistic.ts | tee "src/logs/api/test-api-get-weekly-statistic-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/api/test-api-get-current-week-statistics.ts | tee "src/logs/api/test-api-get-current-week-statistics-$(date +%Y%m%d-%H%M%S).txt"
+k6 run src/tests/api/test-api-get-weekly-statistics-by-date.ts | tee "src/logs/api/test-api-get-weekly-statistics-by-date-$(date +%Y%m%d-%H%M%S).txt"
 
 <!-- smart-contract -->
 k6 run src/tests/smct/test-bet-place.ts | tee "src/logs/smct/test-bet-place-$(date +%Y%m%d-%H%M%S).txt"

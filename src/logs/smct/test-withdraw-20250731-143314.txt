@@ -1,0 +1,93 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: src/tests/smct/test-withdraw.ts
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 15 max VUs, 40s max duration (incl. graceful stop):
+              * default: 15 looping VUs for 10s (gracefulStop: 30s)
+
+
+running (01.0s), 15/15 VUs, 0 complete and 0 interrupted iterations
+default   [  10% ] 15 VUs  01.0s/10s
+
+running (02.0s), 15/15 VUs, 0 complete and 0 interrupted iterations
+default   [  20% ] 15 VUs  02.0s/10s
+
+running (03.0s), 15/15 VUs, 0 complete and 0 interrupted iterations
+default   [  30% ] 15 VUs  03.0s/10s
+
+running (04.0s), 15/15 VUs, 9 complete and 0 interrupted iterations
+default   [  40% ] 15 VUs  04.0s/10s
+
+running (05.0s), 15/15 VUs, 10 complete and 0 interrupted iterations
+default   [  50% ] 15 VUs  05.0s/10s
+
+running (06.0s), 15/15 VUs, 10 complete and 0 interrupted iterations
+default   [  60% ] 15 VUs  06.0s/10s
+
+running (07.0s), 15/15 VUs, 13 complete and 0 interrupted iterations
+default   [  70% ] 15 VUs  07.0s/10s
+
+running (08.0s), 15/15 VUs, 19 complete and 0 interrupted iterations
+default   [  80% ] 15 VUs  08.0s/10s
+
+running (09.0s), 15/15 VUs, 20 complete and 0 interrupted iterations
+default   [  90% ] 15 VUs  09.0s/10s
+
+running (10.0s), 15/15 VUs, 20 complete and 0 interrupted iterations
+default   [ 100% ] 15 VUs  10.0s/10s
+
+running (11.0s), 11/15 VUs, 24 complete and 0 interrupted iterations
+default ↓ [ 100% ] 15 VUs  10s
+
+running (12.0s), 05/15 VUs, 30 complete and 0 interrupted iterations
+default ↓ [ 100% ] 15 VUs  10s
+
+running (13.0s), 05/15 VUs, 30 complete and 0 interrupted iterations
+default ↓ [ 100% ] 15 VUs  10s
+
+running (14.0s), 05/15 VUs, 30 complete and 0 interrupted iterations
+default ↓ [ 100% ] 15 VUs  10s
+
+running (15.0s), 05/15 VUs, 30 complete and 0 interrupted iterations
+default ↓ [ 100% ] 15 VUs  10s
+
+running (16.0s), 01/15 VUs, 34 complete and 0 interrupted iterations
+default ↓ [ 100% ] 15 VUs  10s
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......................: 35      2.182993/s
+    checks_succeeded...................: 100.00% 35 out of 35
+    checks_failed......................: 0.00%   0 out of 35
+
+    ✓ status is 201
+
+    HTTP
+    http_req_duration.......................................................: avg=5.37s min=2.83s med=4s max=8.79s p(90)=7.91s p(95)=8.36s
+      { expected_response:true }............................................: avg=5.37s min=2.83s med=4s max=8.79s p(90)=7.91s p(95)=8.36s
+    http_req_failed.........................................................: 0.00% 0 out of 35
+    http_reqs...............................................................: 35    2.182993/s
+
+    EXECUTION
+    iteration_duration......................................................: avg=5.38s min=2.83s med=4s max=8.79s p(90)=7.91s p(95)=8.36s
+    iterations..............................................................: 35    2.182993/s
+    vus.....................................................................: 1     min=1       max=15
+    vus_max.................................................................: 15    min=15      max=15
+
+    NETWORK
+    data_received...........................................................: 10 kB 631 B/s
+    data_sent...............................................................: 13 kB 813 B/s
+
+
+
+
+running (16.0s), 00/15 VUs, 35 complete and 0 interrupted iterations
+default ✓ [ 100% ] 15 VUs  10s

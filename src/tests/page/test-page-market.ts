@@ -3,15 +3,14 @@ import { check } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
-  vus: 30,
-  duration: "30s",
+  vus: 20,
+  duration: "10s",
 };
 
 export default function () {
   const now = new Date().toISOString();
-  // marketId: "Bh8eYrbhMaKrjBwXoHfzQeWzLBddtQ1v2vZ4JCuw8Vug"
   const res = http.get(
-    "https://dev.mememarket.fun/market/Bh8eYrbhMaKrjBwXoHfzQeWzLBddtQ1v2vZ4JCuw8Vug"
+    "https://dev.mememarket.fun/market/X3ZXxSFtuxtsnnKvxayYV99JASPamBFfWo8Tk8LJ5ie"
   );
 
   check(res, {

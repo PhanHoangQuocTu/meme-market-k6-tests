@@ -11,18 +11,18 @@ export const options: Options = {
 export default function () {
   const now = new Date().toISOString();
   const res = http.get(
-    "https://meme-market.var-meta.com/api/v1/prediction-markets/by-market-address/X3ZXxSFtuxtsnnKvxayYV99JASPamBFfWo8Tk8LJ5ie"
+    "https://meme-market.var-meta.com/api/v1/liquidity-rewards/current-week/stats"
   );
 
   check(res, {
     "status is 200": (r) => {
       if (r.status !== 200) {
         console.log(
-          `[${now} - API "/prediction-markets/by-market-address"] ❌ Status: ${r.status}`
+          `[${now} - API "/liquidity-rewards/current-week/stats"] ❌ Status: ${r.status}`
         );
       } else {
         console.log(
-          `[${now} - API "/prediction-markets/by-market-address"] ✅ Success`
+          `[${now} - API "/liquidity-rewards/current-week/stats"] ✅ Success`
         );
       }
       return r.status === 200;
