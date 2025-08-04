@@ -3,9 +3,9 @@ import { check } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
-  vus: 10,
-  duration: "10s",
-  // iterations: 1000, // 1000 requests
+  vus: 20,
+  duration: "1m",
+  iterations: 1000, // 1000 requests
 };
 
 export default function () {

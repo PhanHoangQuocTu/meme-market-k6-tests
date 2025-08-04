@@ -6684,7 +6684,7 @@ const wallets: IWallet[] = [
 
 export const options: Options = {
   vus: 15,
-  duration: "10s",
+  duration: "1m",
   // iterations: 1000, // 1000 requests
 };
 
@@ -6711,7 +6711,7 @@ export default function () {
     betYes: Math.random() > 0.5, //random true or false
     amount: Math.random() * (0.0001 - 0.00001) + 0.00001, // random between 0.00001 and 0.0001
     isSol: true,
-    marketAddress: "64jJtCLREgHNBbtJgwVzVrM1csZ1N9GST1yqjQGoYe1f",
+    marketAddress: "3B9nZRQ3pW2EW8upNdSzBk1hY6GQB4GrSZXfheafrcjL",
     privateKey: wallet?.privateKeyBase58,
     decimal: 9,
   });
