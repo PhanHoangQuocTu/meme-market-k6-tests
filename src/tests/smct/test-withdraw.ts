@@ -6683,8 +6683,8 @@ const wallets: IWallet[] = [
 ];
 
 export const options: Options = {
-  vus: 15,
-  duration: "10s",
+  vus: 2000,
+  duration: "2m",
   // iterations: 1000, // 1000 requests
 };
 

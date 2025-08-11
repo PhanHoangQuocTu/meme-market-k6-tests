@@ -3,13 +3,13 @@ import { check } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
-  vus: 20,
-  duration: "10s",
+  vus: 2000,
+  duration: "2m",
+  // iterations: 1000, // 1000 requests
 };
-
 export default function () {
   const now = new Date().toISOString();
-  const res = http.get("https://dev.mememarket.fun/market/history");
+  const res = http.get("https://prod.mememarket.fun/market/history");
 
   check(res, {
     "status is 200": (r) => {

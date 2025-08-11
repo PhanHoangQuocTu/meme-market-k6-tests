@@ -3,15 +3,15 @@ import { check } from "k6";
 import { Options } from "k6/options";
 
 export const options: Options = {
-  vus: 20,
-  duration: "1m",
-  iterations: 1000, // 1000 requests
+  vus: 2000,
+  duration: "2m",
+  // iterations: 1000, // 1000 requests
 };
 
 export default function () {
   const now = new Date().toISOString();
   const res = http.get(
-    "https://meme-market.var-meta.com/api/v1/prediction-markets"
+    "https://api-prod.mememarket.fun/api/v1/prediction-markets"
   );
 
   check(res, {
