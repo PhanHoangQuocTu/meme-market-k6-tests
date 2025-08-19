@@ -16,10 +16,10 @@ export const options: Options = {
 
 export default function () {
   const res = http.get(
-    "https://api-prod.mememarket.fun/api/v1/prediction-markets/simple",
+    "https://api-prod.mememarket.fun/api/v1/prediction-markets",
     {
       timeout: "30s",
-      tags: { name: "prediction-markets-simple" },
+      tags: { name: "prediction-markets" },
     }
   );
 
