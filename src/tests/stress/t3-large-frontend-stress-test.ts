@@ -178,11 +178,14 @@ function performFrontendAction(action: any, behaviorName: string, actionNumber: 
   if (!success || (res.status !== 200 && res.status !== 401)) {
     feStressErrorRate.add(1);
     
-    // Log frontend-specific errors
-    if (res.status >= 500 || res.status === 0) {
-      console.log(`🚨 FE ${behaviorName} FAIL - Status: ${res.status}, Time: ${duration}ms`);
-    } else if (res.status === 429) {
-      console.log(`⚠️ FE RATE LIMITED ${behaviorName} - Time: ${duration}ms`);
+    // Log ALL errors with detailed response info
+    console.log(`🚨 FE ${behaviorName} FAIL - Status: ${res.status}, Time: ${duration}ms, URL: ${finalUrl}`);
+    console.log(`Response Body: ${res.body ? res.body.substring(0, 500) : 'No body'}`);
+    console.log(`Error Type: ${res.error ? res.error : 'No error details'}`);
+  } else {
+    // Log some successful responses to verify what's working
+    if (Math.random() < 0.01) { // 1% chance to log success
+      console.log(`✅ FE ${behaviorName} SUCCESS - Status: ${res.status}, Time: ${duration}ms`);
     }
   }
 
